@@ -1,4 +1,4 @@
-package lab1;
+package triangles;
 
 import java.util.Scanner;
 
@@ -17,5 +17,6 @@ public class Triangles {
          }
          System.out.println();
       }
+      scanner.close();
    }
 }
