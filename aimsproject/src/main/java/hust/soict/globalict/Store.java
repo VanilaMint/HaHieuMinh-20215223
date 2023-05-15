@@ -1,4 +1,4 @@
-package hust.soict.dsai;
+package hust.soict.globalict;
 
 public class Store {
     private DigitalVideoDisc itemsInStore[] = new DigitalVideoDisc[10000];

@@ -1,4 +1,4 @@
-package hust.soict.dsai;
+package hust.soict.globalict;
 public class StoreTest {
     public static void main(String[] args) {
         Store aStore= new Store();

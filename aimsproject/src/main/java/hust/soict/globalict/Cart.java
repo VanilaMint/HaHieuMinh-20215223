@@ -1,4 +1,4 @@
-package hust.soict.dsai;
+package hust.soict.globalict;
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERS=20;

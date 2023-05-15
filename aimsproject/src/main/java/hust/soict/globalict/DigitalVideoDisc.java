@@ -1,4 +1,4 @@
-package hust.soict.dsai;
+package hust.soict.globalict;
 public class DigitalVideoDisc {
     private static int nbDigitalVideoDiscs = 0;
     private int id;

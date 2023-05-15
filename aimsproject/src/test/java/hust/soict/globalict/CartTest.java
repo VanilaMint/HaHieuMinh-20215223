@@ -1,5 +1,5 @@
-package hust.soict.dsai;
-public class Aims {
+package hust.soict.globalict;
+public class CartTest {
     public static void main(String[] args) {
         Cart anOrder = new Cart();
         DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King","Animation","Roger Alters", 87, 19.95f);
@@ -8,10 +8,10 @@ public class Aims {
         anOrder.addDigitalVideoDisc(dvd2);
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin","animation", 18.99f);
         anOrder.addDigitalVideoDisc(dvd3);
-        System.out.println("Total Cost is: ");
-        System.out.println(anOrder.totalCost());
-        System.out.println(anOrder.removeDigitalVideoDisc(dvd3));
-        System.out.println("Total Cost is: ");
-        System.out.println(anOrder.totalCost());
+        anOrder.printCart();
+        anOrder.search(1);
+        anOrder.search("Aladin");
+        anOrder.search("Star Wars");
+        anOrder.search("Shrek");
     }
 }
