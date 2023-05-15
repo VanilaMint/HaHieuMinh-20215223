@@ -19,4 +19,13 @@ public class Store {
            }
         }
     }
+    public void printStore(){
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:");
+        for(int i = 0; i<qty; i++){
+            System.out.println(String.valueOf(i+1)+". DVD - "+itemsInStore[i].toString());
+        }
+        System.out.println("***************************************************");
+    }
+
 }
