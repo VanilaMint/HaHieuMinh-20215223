@@ -1,5 +1,6 @@
 package ooplab;
 
+
 public class Cart {
     public static final int MAX_NUMBERS_ORDERS=20;
     private DigitalVideoDisc itemOrdered[] = new DigitalVideoDisc[MAX_NUMBERS_ORDERS];
@@ -33,5 +34,14 @@ public class Cart {
             total+=itemOrdered[i].getCost();
         }
         return total;
+    }
+    public void printCart(){
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:");
+        for(int i = 0; i<qtyOrdered; i++){
+            System.out.println(String.valueOf(i+1)+". DVD - "+itemOrdered[i].toString());
+        }
+        System.out.println("Total cost: "+String.valueOf(totalCost()));
+        System.out.println("***************************************************");
     }
 }
