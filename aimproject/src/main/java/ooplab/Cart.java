@@ -44,4 +44,22 @@ public class Cart {
         System.out.println("Total cost: "+String.valueOf(totalCost()));
         System.out.println("***************************************************");
     }
+    public void search(int inp){
+        for(int i=0 ; i<qtyOrdered; i++){
+            if(inp == itemOrdered[i].getId()){
+                System.out.println("DVD - "+itemOrdered[i].toString());
+                return;
+            }
+        }
+        System.out.println("No disc matching this id was found");
+    }
+    public void search(String inp){
+        for(int i=0 ; i<qtyOrdered; i++){
+            if(itemOrdered[i].getTitle() == inp){
+                System.out.println("DVD - "+itemOrdered[i].toString());
+                return;
+            }
+        }
+        System.out.println("No disc matching this title was found");
+    }
 }
