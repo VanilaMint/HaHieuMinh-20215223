@@ -1,4 +1,5 @@
-import java.nio.channels.Pipe;
+package ooplab;
+
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERS=20;
@@ -33,7 +34,7 @@ public class Cart {
     }
     public String removeDigitalVideoDisc(DigitalVideoDisc disc){
         for(int i=0;i<qtyOrdered;i++){
-            if(itemOrdered[i] == disc){
+            if(itemOrdered[i].equals(disc)){
                 for(int j=i+1;j<qtyOrdered;j++){
                     DigitalVideoDisc tmp=itemOrdered[i-1];
                     itemOrdered[i-1]=itemOrdered[i];
@@ -51,5 +52,32 @@ public class Cart {
             total+=itemOrdered[i].getCost();
         }
         return total;
+    }
+    public void printCart(){
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:");
+        for(int i = 0; i<qtyOrdered; i++){
+            System.out.println(String.valueOf(i+1)+". DVD - "+itemOrdered[i].toString());
+        }
+        System.out.println("Total cost: "+String.valueOf(totalCost()));
+        System.out.println("***************************************************");
+    }
+    public void search(int inp){
+        for(int i=0 ; i<qtyOrdered; i++){
+            if(inp == itemOrdered[i].getId()){
+                System.out.println("DVD - "+itemOrdered[i].toString());
+                return;
+            }
+        }
+        System.out.println("No disc matching this id was found");
+    }
+    public void search(String inp){
+        for(int i=0 ; i<qtyOrdered; i++){
+            if(itemOrdered[i].getTitle() == inp){
+                System.out.println("DVD - "+itemOrdered[i].toString());
+                return;
+            }
+        }
+        System.out.println("No disc matching this title was found");
     }
 }

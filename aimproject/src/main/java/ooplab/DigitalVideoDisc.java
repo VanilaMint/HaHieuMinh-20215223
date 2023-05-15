@@ -7,6 +7,9 @@ public class DigitalVideoDisc {
     private String director;
     private int length;
     private float cost;
+    public int getId() {
+        return id;
+    }
     public String getTitle() {
         return title;
     }
@@ -51,7 +54,14 @@ public class DigitalVideoDisc {
         this.director = director;
         this.cost = cost;
     }
-    
+    public String toString(){
+        String tmp=this.title;
+        if(this.category!=null)tmp+=" - " + category;
+        if(this.director!=null)tmp+=" - " + director;
+        if(this.length!=0)tmp+=" - " + String.valueOf(length);
+        if(this.cost != 0.0f)tmp+=": "+String.valueOf(cost)+" $";
+        return tmp;
+    }
 }
     
     
