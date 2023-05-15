@@ -5,11 +5,8 @@ public class DigitalVideoDisc {
     private String director;
     private int length;
     private float cost;
-    public String getTitle() {
+    public String getTitles() {
         return titles;
-    }
-    public void setTitle(String titles) {
-        this.titles = titles;
     }
     public String getCategory() {
         return category;
