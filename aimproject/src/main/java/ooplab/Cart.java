@@ -1,4 +1,4 @@
-package ooplab;
+import java.nio.channels.Pipe;
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERS=20;
@@ -12,6 +12,24 @@ public class Cart {
             else return "A disc has been added";
         }
         return "Your cart is already full";
+    }
+    public String addDigitalVideoDisc(DigitalVideoDisc[] dvdList){
+        if(qtyOrdered+dvdList.length>20) return "Your cart can't add this much disc";
+        for(int i=0;i<dvdList.length;i++){
+            qtyOrdered++;
+            itemOrdered[qtyOrdered-1]=dvdList[i];
+            if(qtyOrdered==20)return "Your cart is now full";
+        }
+        return "Your disc has been added to cart";
+    }
+    public String addDigitalVideoDisc(DigitalVideoDisc dvd1,DigitalVideoDisc dvd2){
+        if(qtyOrdered+2>20) return "Your cart can't add this much disc";
+        for(int i=0;i<2;i++){
+            qtyOrdered++;
+            itemOrdered[qtyOrdered-1]=i==0?dvd1:dvd2;
+            if(qtyOrdered==20)return "Your cart is now full";
+        }
+        return "Your disc has been added to cart";
     }
     public String removeDigitalVideoDisc(DigitalVideoDisc disc){
         for(int i=0;i<qtyOrdered;i++){
