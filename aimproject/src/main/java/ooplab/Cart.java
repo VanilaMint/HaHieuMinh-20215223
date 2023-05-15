@@ -15,7 +15,7 @@ public class Cart {
     }
     public String removeDigitalVideoDisc(DigitalVideoDisc disc){
         for(int i=0;i<qtyOrdered;i++){
-            if(itemOrdered[i] == disc){
+            if(itemOrdered[i].equals(disc)){
                 for(int j=i+1;j<qtyOrdered;j++){
                     DigitalVideoDisc tmp=itemOrdered[i-1];
                     itemOrdered[i-1]=itemOrdered[i];
