@@ -1,4 +1,6 @@
-package hust.soict.globalict;
+package hust.soict.globalict.aims;
+
+import hust.soict.globalict.aims.media.DigitalVideoDisc;
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERS=20;

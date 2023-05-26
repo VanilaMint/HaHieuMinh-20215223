@@ -2,11 +2,7 @@ package hust.soict.globalict.aims.media;
 
 import java.util.ArrayList;
 import java.util.*;
-public class Book{
-    private int id;
-    private String title;
-    private String category;
-    private float cost;
+public class Book extends Media{
     private List<String> authors = new ArrayList<String>();
     public void addAuthor(String name){
         authors.remove(name);
@@ -17,5 +13,5 @@ public class Book{
         authors.remove(name);
         return;
     }
-    
+
 }

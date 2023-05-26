@@ -1,12 +1,8 @@
-package hust.soict.globalict;
-public class DigitalVideoDisc {
+package hust.soict.globalict.aims.media;
+public class DigitalVideoDisc extends Media{
     private static int nbDigitalVideoDiscs = 0;
-    private int id;
-    private String title;
-    private String category;
     private String director;
     private int length;
-    private float cost;
     public int getId() {
         return id;
     }

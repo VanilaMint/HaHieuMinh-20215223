@@ -1,4 +1,6 @@
-package hust.soict.globalict;
+package hust.soict.globalict.aims;
+import hust.soict.globalict.aims.Cart;
+import hust.soict.globalict.aims.media.*;;
 public class StoreTest {
     public static void main(String[] args) {
         Store aStore= new Store();
