@@ -1,8 +1,6 @@
 package hust.soict.globalict.aims.media;
 public class DigitalVideoDisc extends Disc{
     private static int nbDigitalVideoDiscs = 0;
-    private String director;
-    private int length;
     public int getId() {
         return id;
     }
@@ -25,30 +23,17 @@ public class DigitalVideoDisc extends Disc{
         nbDigitalVideoDiscs++;
         this.id = nbDigitalVideoDiscs;
     }
-    public DigitalVideoDisc(String titles) {
+    public DigitalVideoDisc(String title){
+        super(title);
         updateid();
-        this.title = titles;
     }
-    public DigitalVideoDisc(String titles, String category, float cost) {
+    public DigitalVideoDisc(String title, String category,String director, int length,float cost){
+        super(title, category, director , length,cost);
         updateid();
-        this.title = titles;
-        this.category = category;
-        this.cost = cost;
     }
-    public DigitalVideoDisc(String titles, String category, String director, int length, float cost) {
+    public DigitalVideoDisc(String title, String category, float cost){
+        super(title, category, cost);
         updateid();
-        this.title = titles;
-        this.category = category;
-        this.director = director;
-        this.length = length;
-        this.cost = cost;
-    }
-    public DigitalVideoDisc(String titles, String category, String director, float cost) {
-        updateid();
-        this.title = titles;
-        this.category = category;
-        this.director = director;
-        this.cost = cost;
     }
     public String toString(){
         String tmp=this.title;
