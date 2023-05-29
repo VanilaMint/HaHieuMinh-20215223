@@ -40,7 +40,8 @@ public class CompactDisc extends Disc{
     }
     public int getLength(){
         for(Track tmp: tracks){
-            length+=
+            this.length+= tmp.getLength();
         }
+        return this.length;
     }
 }
