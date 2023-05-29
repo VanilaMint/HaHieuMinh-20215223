@@ -1,5 +1,5 @@
 package hust.soict.globalict.aims.media;
-public class DigitalVideoDisc extends Disc{
+public class DigitalVideoDisc extends Disc implements Playable{
     private static int nbDigitalVideoDiscs = 0;
     public int getId() {
         return id;
@@ -43,6 +43,13 @@ public class DigitalVideoDisc extends Disc{
         if(this.cost != 0.0f)tmp+=": "+String.valueOf(cost)+" $";
         return tmp;
     }
+    public void play() { 
+
+        System.out.println("Playing DVD: " + this.getTitle()); 
+        
+        System.out.println("DVD length: " + this.getLength()); 
+        
+    }   
 }
     
     
