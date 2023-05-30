@@ -5,6 +5,7 @@ public class CompactDisc extends Disc implements Playable{
     private List<Track> tracks = new ArrayList<Track>();
     public CompactDisc(String title, String category, String director, int length, float cost) {
         super(title, category, director, length, cost);
+        this.artist = director;
     }
 
     public CompactDisc(String title, String category, float cost) {
@@ -21,12 +22,12 @@ public class CompactDisc extends Disc implements Playable{
     public void addTrack(Track track){
         for(Track tmp : tracks){
             if(tmp.equals(track)){
-                System.out.println("The track is already added");
+                System.out.println("That track is already added");
                 return;
             }
         }
         tracks.add(track);
-        System.out.println("Track is added");
+        //System.out.println("Track is added");
         return;
     }
     public void removeTrack(Track track){
@@ -50,5 +51,13 @@ public class CompactDisc extends Disc implements Playable{
             tmp.play();
         }
         return;
+    }
+    public String toString(){
+        String tmp="CD - "+this.title;
+        if(this.category!=null)tmp+=" - " + category;
+        if(this.artist!=null)tmp+=" - " + artist;
+        if(this.length!=0)tmp+=" - " + String.valueOf(length);
+        if(this.cost != 0.0f)tmp+=": "+String.valueOf(cost)+" $";
+        return tmp;
     }
 }

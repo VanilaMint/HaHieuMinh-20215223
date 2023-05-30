@@ -19,5 +19,21 @@ public class Book extends Media{
         authors.remove(name);
         return;
     }
-
+    public String toString(){
+        String tmp="Book - "+this.title;
+        if(this.category!=null)tmp+=" - " + category;
+        if(!this.authors.isEmpty()){
+            tmp+=" - ";
+            boolean chk=false;
+            for(String author:authors){
+                if(!chk){
+                    tmp+= author;
+                    chk=true;
+                }
+                else tmp+= ", "+author;
+            }
+        }
+        if(this.cost != 0.0f)tmp+=": "+String.valueOf(cost)+" $";
+        return tmp;
+    }
 }

@@ -5,36 +5,34 @@ public class Media {
     protected String title;
     protected String category;
     protected float cost;
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
+    private static int nMedia=0;
+    public float getCost() {
+        return cost;
     }
     public String getTitle() {
         return title;
     }
-    public void setTitle(String title) {
-        this.title = title;
+    
+    public int getId() {
+        return id;
     }
-    public String getCategory() {
-        return category;
+    private void updateid(){
+        nMedia++;
+        this.id = nMedia;
     }
-    public void setCategory(String category) {
-        this.category = category;
-    }
-    public float getCost() {
-        return cost;
-    }
-    public void setCost(float cost) {
-        this.cost = cost;
+    public boolean equals(Object obj){
+        if(!(obj instanceof Media))return false;
+        Media tmp = (Media) obj;
+        return this.title.equals(tmp.title);
     }
     public Media(String title, String category, float cost) {
         this.title = title;
         this.category = category;
         this.cost = cost;
+        updateid();
     }
     public Media(String title) {
         this.title = title;
+        updateid();
     }
 }
